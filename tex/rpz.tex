@@ -1,7 +1,7 @@
 %% Преамбула TeX-файла
 
 % 1. Стиль и язык
-\documentclass[utf8x, 12pt]{G7-32} % Стиль (по умолчанию будет 14pt)
+\documentclass[utf8, 12pt]{G7-32} % Стиль (по умолчанию будет 14pt)
 
 % Остальные стандартные настройки убраны в preamble.inc.tex.
 \include{preamble.inc}
@@ -16,6 +16,10 @@
 % Полезные макросы листингов.
 \include{macros.inc}
 
+% Определим переменные, которые будут использоваться в отчете
+% (название организации, город, ФИО и т. д.)
+\include{variables.inc}
+
 \begin{document}
 
 \frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
@@ -27,6 +31,7 @@
 % \nobreakingbeforechapters
 % \breakingbeforechapters
 
+\include{99-title}
 \include{00-abstract}
 
 \tableofcontents
